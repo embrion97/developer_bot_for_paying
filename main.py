@@ -1,5 +1,4 @@
 import asyncio
-import sqlite3
 from aiogram import Dispatcher, F
 from aiogram.filters import Command
 import logging
