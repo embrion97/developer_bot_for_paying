@@ -10,7 +10,6 @@ from aiogram.fsm.storage.memory import MemoryStorage
 
 
 
-
 async def start():
     logging.basicConfig(
         level=logging.INFO,
