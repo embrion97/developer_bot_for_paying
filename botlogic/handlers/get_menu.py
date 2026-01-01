@@ -16,7 +16,6 @@ async def contact_menu(message: Message, state: FSMContext):
     await message.answer(views.contacts(), reply_markup=kb.contact_keyboard.as_markup())
 
 
-
 async def next_menu(message: Message, state: FSMContext):
     await message.answer(views.pay(), reply_markup=kb.back_kb)
     await state.set_state(SendFileSteps.pays)
