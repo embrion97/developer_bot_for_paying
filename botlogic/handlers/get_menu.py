@@ -10,6 +10,10 @@ async def start_menu(message: Message, state: FSMContext):
     await message.answer(views.start_text(), reply_markup=kb.start_kb, parse_mode="HTML")
     await state.set_state(SendFileSteps.mainmenu)
 
+async def start_menu_inline(x: CallbackQuery, state: FSMContext):
+    await x.message.answer(views.start_text(), reply_markup=kb.start_kb, parse_mode="HTML")
+    await state.set_state(SendFileSteps.mainmenu)
+
 
 async def contact_menu(message: Message, state: FSMContext):
     await state.set_state(SendFileSteps.contactmenu)
