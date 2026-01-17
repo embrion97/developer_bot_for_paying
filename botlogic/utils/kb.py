@@ -18,8 +18,23 @@ back_keyboard = [
 ]
 back_kb = ReplyKeyboardMarkup(keyboard=back_keyboard, resize_keyboard=True, one_time_keyboard=True)
 
-contact_keyboard = InlineKeyboardBuilder()
-offer = InlineKeyboardButton(text="Оферта", callback_data='oferta')
-contact_keyboard.row(offer)
-bak = InlineKeyboardButton(text="Назад", callback_data='back')
-contact_keyboard.row(bak)
+inline_back = InlineKeyboardBuilder()
+inline_back.button(
+        text="Назад",
+        callback_data="back"
+    )
+inline_back.adjust(1)
+
+contact_keyboard = ReplyKeyboardMarkup(
+    resize_keyboard=True,
+    one_time_keyboard=True,
+    keyboard=[
+        [
+            KeyboardButton(text="Контакты"),
+            KeyboardButton(text="Условия возврата"),
+            KeyboardButton(text="Оферта")
+        ],[
+            KeyboardButton(text="В главное меню")
+        ]
+    ]
+)

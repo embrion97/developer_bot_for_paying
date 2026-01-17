@@ -5,7 +5,7 @@ from botlogic.utils.commands import set_commands
 
 async def start_bot():
     await set_commands(bot)
-    await bot.send_message(Secrets.admin_id, start_bot_msg())
+#    await bot.send_message(Secrets.admin_id, start_bot_msg())
 
 
 async def stop_bot():
